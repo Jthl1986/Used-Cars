@@ -28,14 +28,14 @@ def load_lottieurl(url: str):
 st.title("Valuación Autos App")
 
 #Llamando al modelo
-def load_model():
-    with open("regressor3.pkl", "rb") as file:
-        data = pickle.load(file)
-    return data
-
 #def load_model():
-#    data = joblib.load("regressor3.pkl")
+#    with open("regressor3.pkl", "rb") as file:
+#        data = pickle.load(file)
 #    return data
+
+def load_model():
+    data = joblib.load("regressor3.pkl")
+    return data
 
 data = load_model()
 
