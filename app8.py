@@ -67,8 +67,8 @@ def app():
     
     form = st.form("my_form")
     manufacturer = form.selectbox('Marca: ', manufacturers)
-    year = form.number_input("Año: ")
-    odometer = form.number_input("Kilometraje: ") 
+    year = form.number_input("Año: ", min_value=1971, max_value=2021, value=0)
+    odometer = form.number_input("Kilometraje: ", min_value=0, max_value=999999, value=0) 
     cylinder = form.selectbox('Cilindrada: ', cylinders) 
     transmission = form.selectbox('Transmisión: ', transmissions) 
     drive = form.selectbox('Tracción: ', drives)
