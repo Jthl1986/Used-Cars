@@ -65,15 +65,15 @@ def app():
     paint_colors = ('black', 'silver', 'grey', 'red', 'blue', 'white', 'brown',
        'yellow', 'green', 'custom', 'orange', 'purple')
     
-    form = st.form("my_form")
-    manufacturer = form.selectbox('Marca: ', manufacturers)
-    year = form.number_input("Año: ", min_value=1971, max_value=2021, value=0)
-    odometer = form.number_input("Kilometraje: ", min_value=0, max_value=999999, value=0) 
-    cylinder = form.selectbox('Cilindrada: ', cylinders) 
-    transmission = form.selectbox('Transmisión: ', transmissions) 
-    drive = form.selectbox('Tracción: ', drives)
-    paint_color = form.selectbox('Color: ', paint_colors)
-    submit = form.form_submit_button("Iniciar valuación")
+    #form = st.form("my_form")
+    manufacturer = st.selectbox('Marca: ', manufacturers)
+    year = st.number_input("Año: ", min_value=1971, max_value=2021, value=0)
+    odometer = st.number_input("Kilometraje: ", min_value=0, max_value=999999, value=0) 
+    cylinder = st.selectbox('Cilindrada: ', cylinders) 
+    transmission = st.selectbox('Transmisión: ', transmissions) 
+    drive = st.selectbox('Tracción: ', drives)
+    paint_color = st.selectbox('Color: ', paint_colors)
+    submit = st.button("Iniciar valuación")
     
     if submit:
         X = np.array([[year, odometer, manufacturer, cylinder, transmission, drive, paint_color]])
