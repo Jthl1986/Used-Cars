@@ -74,6 +74,7 @@ def app():
     drive = st.selectbox('Tracción: ', drives)
     paint_color = st.selectbox('Color: ', paint_colors)
     submit = st.button("Iniciar valuación")
+    #
     
     if submit:
         X = np.array([[year, odometer, manufacturer, cylinder, transmission, drive, paint_color]])
