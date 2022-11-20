@@ -6,6 +6,7 @@ import requests
 import pickle
 from sklearn.preprocessing import LabelEncoder
 from PIL import Image
+import joblib
 
 # Configuración de página
 st.set_page_config(page_title="Sistema de predicción valor auto usado",page_icon="🚗",layout="centered")
@@ -34,9 +35,13 @@ with st.sidebar:
 st.title("Digital Motors App")
 
 #Llamando al modelo
+#def load_model():
+#    with open("./models/regressor3.pkl", "rb") as file:
+#        data = pickle.load(file)
+#    return data
+
 def load_model():
-    with open("./models/regressor3.pkl", "rb") as file:
-        data = pickle.load(file)
+    data = joblib.load("regressor3.pkl")
     return data
 
 data = load_model()
