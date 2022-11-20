@@ -5,7 +5,6 @@ from streamlit_lottie import st_lottie
 import requests
 import pickle
 from sklearn.preprocessing import LabelEncoder
-from lightgbm import LGBMRegressor
 from PIL import Image
 
 # Configuración de página
