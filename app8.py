@@ -15,7 +15,7 @@ from PIL import Image
 
 
 # Configuración de página
-st.set_page_config(page_title="Sistema de predicción valor auto usado",page_icon="🚗",layout="centered")
+st.set_page_config(page_title="Grupo 2 Digital House",page_icon="🚗",layout="centered")
 
 # Para subir la animación del sidebar
 def load_lottieurl(url: str):
@@ -25,7 +25,7 @@ def load_lottieurl(url: str):
     return r.json()
 
 #Configuración página principal
-st.title("Valuación Autos App")
+st.title("Digital Motors App")
 
 #Llamando al modelo
 #def load_model():
@@ -92,7 +92,7 @@ def app():
 #Configuración del sidebar
 lottie_book = load_lottieurl('https://assets5.lottiefiles.com/private_files/lf30_skwgamub.json')
 with st.sidebar:
-    st.title('Digital Motors App')
+    st.title('Trabajo integrador Digital House')
     st.caption("Grupo 2: CRodriguez Geier & JSantacecilia")
     st.markdown("---")
 my_button = st.sidebar.radio("Opciones",('Valuación autos', 'Parametros del trabajo'))
