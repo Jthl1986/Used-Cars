@@ -35,7 +35,7 @@ st.title("Digital Motors App")
 
 #Llamando al modelo
 def load_model():
-    with open("./models/regressor.pkl", "rb") as file:
+    with open("./models/regressor3.pkl", "rb") as file:
         data = pickle.load(file)
     return data
 
