@@ -34,7 +34,7 @@ st.title("Digital Motors App")
 #    return data
 
 def load_model():
-    data = joblib.load("regressor3.pkl")
+    data = joblib.load("regressor3.pkl", "rb")
     return data
 
 data = load_model()
