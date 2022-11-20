@@ -77,11 +77,11 @@ def app():
     
     if submit:
         X = np.array([[year, odometer, manufacturer, cylinder, transmission, drive, paint_color]])
-        X[:, 2] = le_manufacturer.transform(X[:, 2])
-        X[:, 3] = le_cylinder.transform(X[:, 3])
-        X[:, 4] = le_transmission.transform(X[:, 4])
-        X[:, 5] = le_drive.transform(X[:, 5])
-        X[:, 6] = le_paint_color.transform(X[:, 6])
+        X[:, 2] = le_manufacturer.fit_transform(X[:, 2])
+        X[:, 3] = le_cylinder.fit_transform(X[:, 3])
+        X[:, 4] = le_transmission.fit_transform(X[:, 4])
+        X[:, 5] = le_drive.fit_transform(X[:, 5])
+        X[:, 6] = le_paint_color.fit_transform(X[:, 6])
         scaled_X = norm.transform(X)
 
         price = model.predict(scaled_X)
