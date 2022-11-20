@@ -22,7 +22,7 @@ def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
         return None
-    return r.json()
+    return r.json()#
 
 #Configuración página principal
 st.title("Digital Motors App")
