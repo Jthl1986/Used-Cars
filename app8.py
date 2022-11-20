@@ -85,7 +85,7 @@ def app():
         scaled_X = norm.transform(X)
 
         price = model.predict(scaled_X)
-        #actual_price = round(price[0])
+        actual_price = round(price[0])
 
         st.subheader(f"La valuación del auto es: {price:,} dolares")
 
