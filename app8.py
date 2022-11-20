@@ -85,9 +85,9 @@ def app():
         scaled_X = norm.transform(X)
 
         price = model.predict(scaled_X)
-        actual_price = round(price[0])
+        #actual_price = round(price[0])
 
-        st.subheader(f"La valuación del auto es: {actual_price:,} dolares")
+        st.subheader(f"La valuación del auto es: {price:,} dolares")
 
 #Configuración del sidebar
 lottie_book = load_lottieurl('https://assets5.lottiefiles.com/private_files/lf30_skwgamub.json')
