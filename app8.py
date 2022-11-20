@@ -82,8 +82,8 @@ def app():
         X[:, 4] = le_transmission.fit_transform(X[:, 4])
         X[:, 5] = le_drive.fit_transform(X[:, 5])
         X[:, 6] = le_paint_color.fit_transform(X[:, 6])
-        #scaled_X = norm.transform(X)
-        scaled_X = X
+        scaled_X = norm.transform(X)
+        #scaled_X = X
 
         price = model.predict(scaled_X)
         actual_price = round(price[0])
